@@ -1,0 +1,73 @@
+{
+  "repo": "atlas-mob-storage-vault",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for storage workflows, centered on constraint solving, bounded scenario files, and conflict explanations.",
+  "review_model": {
+    "terms": [
+      "form pressure",
+      "sync drift",
+      "local state",
+      "conflict cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "form pressure",
+      "signal": 45,
+      "slack": 38,
+      "drag": 8,
+      "confidence": 73,
+      "score": 177,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "sync drift",
+      "signal": 53,
+      "slack": 34,
+      "drag": 15,
+      "confidence": 64,
+      "score": 159,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "local state",
+      "signal": 78,
+      "slack": 36,
+      "drag": 25,
+      "confidence": 87,
+      "score": 204,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "conflict cost",
+      "signal": 63,
+      "slack": 25,
+      "drag": 23,
+      "confidence": 68,
+      "score": 150,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "form pressure",
+      "signal": 79,
+      "slack": 46,
+      "drag": 28,
+      "confidence": 75,
+      "score": 195,
+      "lane": "ship"
+    }
+  ]
+}
